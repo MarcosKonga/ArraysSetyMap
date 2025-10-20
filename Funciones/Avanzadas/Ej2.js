@@ -3,6 +3,7 @@ const productos = [ { nombre: "Camiseta", precio: 20 }, { nombre:
 
 productos.forEach(function (p) {
     p.precio=p.precio-(p.precio*0.1);
-    console.log(p.precio);
 });
+
+console.log(productos);
 
