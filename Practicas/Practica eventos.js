@@ -1,16 +1,19 @@
 //Numero aleatorio
 function numRandom() {
-    const info=document.getElementById('lista');
-    console.log(info);
-    info.innerHTML+='<li>Numero:'+Math.floor(Math.random() * 100)+'</li>';
+    const info=document.getElementById('numAleatorio');
+    info.innerHTML+='Número: '+Math.floor(Math.random() * 100)+'<br>';
 }
 
-function saludar(nombre) {
-    alert('Hola '+nombre);
-}
-const radios = document.getElementsByTagName('option');
-for(let i=0;i<radios.length;i++) {
-    radios[i].addEventListener('onchange', function() {
-        saludar(this.value);
-    })
-}
+let opcSaludo = document.getElementById('saludo');
+let opcCaja = document.getElementById('caja');
+let opcNumero = document.getElementById('numero');
+
+opcSaludo.addEventListener('click', function() {
+    const info=document.getElementById('mensajeSaludo');
+    info.innerHTML+='Bienvenido a la pagina web<br>';
+});
+opcCaja.addEventListener('click', function() {
+    const info=document.getElementById('nuevaCaja');
+    info.innerHTML+='<div style="background-color: red; position: relative; padding-top: 5%; width: 5%; text-align: center" height:0 >Nueva Caja</div><br>';
+})
+opcNumero.addEventListener('click', numRandom);

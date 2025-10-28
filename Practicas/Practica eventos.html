@@ -8,13 +8,14 @@
 <body>
     <select id="options">
         <option value="" disabled>--Selecciona una opcion--</option>
-        <option value="saludo">Saludo</option>
-        <option value="caja">Crear Caja</option>
-        <option value="numero">Generar Número Aleatorio</option>
+        <option value="saludo" id="saludo">Saludo</option>
+        <option value="caja" id="caja">Crear Caja</option>
+        <option value="numero" id="numero">Generar Número Aleatorio</option>
     </select>
-    <ul id="lista">
-    </ul>
-    <input type="reset">
+    <div id="mensajeSaludo"></div>
+    <div id="nuevaCaja"></div>
+    <div id="numAleatorio"></div>
+    <input type="button" value="Restablecer" onclick="location.reload()"/>
     <script src="Practica eventos.js"></script>
 </body>
 </html>
