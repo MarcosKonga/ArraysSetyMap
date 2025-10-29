@@ -25,5 +25,3 @@ passwrd.addEventListener('blur', function() {
         info.innerHTML='La contraseña debe tener de 8 a 10 carácteres';
     }
 });
-
-submit.addEventListener();
