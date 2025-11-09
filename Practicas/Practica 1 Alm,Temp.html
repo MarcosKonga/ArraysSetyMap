@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="putext"><input type="text" id="nameValue"></div>
+    <button id="submit" onclick="save()">Guardar</button>
+    <button id="erase" onclick="erase()">Borrar</button>
+    <script>
+        const info=document.getElementById("putext");
+        const savedname=localStorage.getItem("name");
+        if(savedname!==null) {
+            info.innerHTML='¡Bienvenido, '+savedname+'!';
+        }
+        function save() {
+            const name=document.getElementById("nameValue");
+            localStorage.setItem("name", name.value);
+            location.reload();
+        }
+        function erase() {
+            localStorage.removeItem("name");
+            location.reload();     
+        }
+    </script>
+</body>
+</html> 

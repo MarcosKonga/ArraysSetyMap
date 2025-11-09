@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Precio en bolsa: </div>
+    <div id="precio"></div>
+    <div id="maxmin"></div>
+    <script>
+        const precio=document.getElementById("precio");
+        const maxmin=document.getElementById("maxmin");
+        let dolar=100;
+        precio.innerHTML=dolar
+        do{
+        setTimeout(function() {
+            let rand=Math.random()*(2-1)+1;
+            if(rand=1) {
+                precio.innerHTML=dolar+5
+            }else if(rand=0) {
+                precio.innerHTML=dolar-5
+            }
+        }, 1000)
+        }while(dolar<120);
+        if(dolar=120) {
+            maxmin.innerHTML='¡Maximo alcanzado!'
+        }else if(dolar<=80) {
+            maxmin.innerHTML='¡Minimo alcanzado!'
+        }
+    </script>
+</body>
+</html>
