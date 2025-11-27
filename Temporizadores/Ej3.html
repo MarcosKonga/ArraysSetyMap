@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let visitas=localStorage.setItem('visitas')
+
+        if(visitas) {
+            vistas=parseInt(visitas)+1;
+        }else {
+            visitas=1;
+        }
+
+        if(visitas>10) {
+            visitas=0;
+            localStorage.removeItem('visitas');
+        }else {
+            localStorage.setItem('visitas', visitas);
+        }
+    </script>
+</body>
+</html>
