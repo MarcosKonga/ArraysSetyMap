@@ -57,4 +57,3 @@ fetch('https://httpbin.org/post', {
         console.log(data['id']);
         productPost.innerHTML=data['title'];
     })
-
