@@ -12,8 +12,11 @@
     <div id="videoDuration"></div>
     <script>
         const video = document.querySelector('video');
-        video.addEventListener('', function() {
-            
+        const videoDuration = document.getElementById('videoDuration');
+        video.addEventListener('contextmenu', function() {
+            event.preventDefault();
+            console.log(video.duration);
+            videoDuration.textContent='Duración del video: '+video.duration+' segundos.'
         })
     </script>
 </body>
